@@ -6,7 +6,7 @@ import {
   updateDoc, 
   doc 
 } from 'firebase/firestore';
-import { db } from '../../../firebase/firebase';
+import { db } from '../../../config/supabase';
 import { Users, Shield, Edit, Save, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 

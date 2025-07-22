@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
-import { db } from '../../../firebase/firebase';
+
+import { db } from '../../../config/supabase';
 import { Users, ChefHat, ShoppingBag, DollarSign } from 'lucide-react';
 
 const AdminDashboard = () => {

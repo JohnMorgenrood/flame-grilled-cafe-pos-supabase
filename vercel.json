@@ -1,18 +1,8 @@
 {
-  "version": 2,
-  "name": "flame-grilled-cafe-pos",
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "env": {
-    "VITE_SUPABASE_URL": "https://ihsrwgidghryxhtgkqml.supabase.co",
-    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imloc3J3Z2lkZ2hyeXhodGdrcW1sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMyMTA1MzIsImV4cCI6MjA2ODc4NjUzMn0.ooyMOC_a7gQwa3XJx-9S7p-6kgxd3Wki_1fwQsKPgXw"
-  }
+  ]
 }

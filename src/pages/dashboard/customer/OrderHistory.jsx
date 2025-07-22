@@ -7,7 +7,7 @@ import {
   where, 
   orderBy 
 } from 'firebase/firestore';
-import { db } from '../../../firebase/firebase';
+import { db } from '../../../config/supabase';
 import { useAuth } from '../../../context/AuthContext';
 import { Clock, CheckCircle, Package } from 'lucide-react';
 

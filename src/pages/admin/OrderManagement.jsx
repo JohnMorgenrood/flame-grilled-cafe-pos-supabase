@@ -11,8 +11,8 @@ import {
   FaUser,
   FaEdit
 } from 'react-icons/fa';
-import { collection, onSnapshot, updateDoc, doc, query, orderBy } from 'firebase/firestore';
-import { db } from '../../firebase/firebase';
+
+import { db } from '../../config/supabase';
 import { toast } from 'react-hot-toast';
 
 const OrderManagement = () => {

@@ -7,8 +7,8 @@ import {
   signInWithPopup,
   signOut 
 } from 'firebase/auth';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { auth, db, googleProvider, facebookProvider } from '../firebase/firebase';
+
+import { auth, db, googleProvider, facebookProvider } from '../config/supabase';
 import toast from 'react-hot-toast';
 
 const AuthContext = createContext({});

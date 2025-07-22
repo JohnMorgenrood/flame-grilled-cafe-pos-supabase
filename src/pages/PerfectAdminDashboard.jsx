@@ -54,7 +54,7 @@ import {
   getDownloadURL, 
   deleteObject 
 } from 'firebase/storage';
-import { db, storage } from '../firebase/firebase';
+import { db, storage } from '../config/supabase';
 
 const PerfectAdminDashboard = () => {
   const navigate = useNavigate();

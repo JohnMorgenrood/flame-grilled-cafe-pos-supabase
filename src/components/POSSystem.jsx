@@ -20,8 +20,8 @@ import {
   X
 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
-import { collection, addDoc, doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 import { useAuth } from '../context/AuthContext';
 
 // Sample menu data (in a real app, this would come from Firebase)

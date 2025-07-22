@@ -21,7 +21,7 @@ import {
   where,
   orderBy 
 } from 'firebase/firestore';
-import { db } from '../../firebase/firebase';
+import { db } from '../../config/supabase';
 
 const EmailMarketing = () => {
   const [customers, setCustomers] = useState([]);

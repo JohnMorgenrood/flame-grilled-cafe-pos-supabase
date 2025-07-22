@@ -1,74 +1,47 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { CategoriesProvider } from './context/CategoriesContext';
-import { OrdersProvider } from './context/OrdersContext';
-import { MessagingProvider } from './context/MessagingContext';
-import { InventoryProvider } from './contexts/InventoryContext';
-import { SettingsProvider } from './contexts/SettingsContext';
-import RestaurantApp from './components/RestaurantApp';
-import CustomerDashboard from './pages/CustomerDashboard';
-import BrandedAdminDashboard from './pages/BrandedAdminDashboard';
-import PerfectAdminDashboard from './pages/PerfectAdminDashboard';
-import CashierDashboard from './pages/CashierDashboard';
-import LoginPage from './pages/LoginPage';
-import WorkingMenuManagement from './pages/WorkingMenuManagement';
-
-// Simple protection without complex auth context
-const SimpleProtectedRoute = ({ children }) => {
-  try {
-    const user = localStorage.getItem('flameGrilledUser');
-    if (!user) {
-      return <Navigate to="/login" replace />;
-    }
-    return children;
-  } catch (error) {
-    console.error('Auth check error:', error);
-    return <Navigate to="/login" replace />;
-  }
-};
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import POSSystem from './components/POSSystem';
+import DemoLogin from './components/DemoLogin';
+import MobileOrderingApp from './components/MobileOrderingApp';
+import RestaurantManager from './components/RestaurantManager';
 
 function App() {
   return (
-    <SettingsProvider>
-      <CategoriesProvider>
-        <OrdersProvider>
-          <MessagingProvider>
-            <InventoryProvider>
-              <Router>
-                <Routes>
-                  <Route path="/login" element={<LoginPage />} />
-                  <Route path="/" element={
-                    <SimpleProtectedRoute>
-                      <RestaurantApp />
-                    </SimpleProtectedRoute>
-                  } />
-                  <Route path="/dashboard" element={
-                    <SimpleProtectedRoute>
-                      <CustomerDashboard />
-                    </SimpleProtectedRoute>
-                  } />
-                  <Route path="/admin" element={
-                    <SimpleProtectedRoute>
-                      <PerfectAdminDashboard />
-                    </SimpleProtectedRoute>
-                  } />
-                  <Route path="/cashier" element={
-                    <SimpleProtectedRoute>
-                      <CashierDashboard />
-                    </SimpleProtectedRoute>
-                  } />
-                  <Route path="/menu-management" element={
-                    <SimpleProtectedRoute>
-                      <WorkingMenuManagement />
-                    </SimpleProtectedRoute>
-                  } />
-                </Routes>
-              </Router>
-            </InventoryProvider>
-          </MessagingProvider>
-        </OrdersProvider>
-      </CategoriesProvider>
-    </SettingsProvider>
+    <Router>
+      <div className="App">
+        <Toaster 
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+            },
+          }}
+        />
+        
+        <Routes>
+          {/* Demo Login for Easy Access */}
+          <Route path="/demo" element={<DemoLogin />} />
+
+          {/* Main POS System Route */}
+          <Route path="/" element={<POSSystem />} />
+          <Route path="/pos" element={<POSSystem />} />
+
+          {/* Mobile Customer Ordering App */}
+          <Route path="/order" element={<MobileOrderingApp />} />
+          <Route path="/mobile" element={<MobileOrderingApp />} />
+
+          {/* Admin Dashboard - Restaurant Manager */}
+          <Route path="/admin" element={<RestaurantManager />} />
+          <Route path="/admin/*" element={<RestaurantManager />} />
+
+          {/* Fallback to POS */}
+          <Route path="*" element={<POSSystem />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

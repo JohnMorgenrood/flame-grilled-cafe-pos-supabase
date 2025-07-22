@@ -14,8 +14,8 @@ import { toast } from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext-simple';
 import { useNavigate } from 'react-router-dom';
 import { paymentService } from '../services/PaymentService';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 
 const EnhancedCheckout = ({ 
   cartItems, 

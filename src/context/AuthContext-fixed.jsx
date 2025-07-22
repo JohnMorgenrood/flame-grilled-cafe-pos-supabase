@@ -12,8 +12,8 @@ import {
   linkWithCredential,
   PhoneAuthProvider
 } from 'firebase/auth';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
-import { auth, db, googleProvider, facebookProvider } from '../firebase/firebase';
+
+import { auth, db, googleProvider, facebookProvider } from '../config/supabase';
 import toast from 'react-hot-toast';
 
 // Create the context

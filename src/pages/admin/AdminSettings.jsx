@@ -13,9 +13,9 @@ import {
   FaExclamationTriangle
 } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
-import { db, storage } from '../../firebase/firebase';
+
+
+import { db, storage } from '../../config/supabase';
 import { useAuth } from '../../context/AuthContext-simple';
 
 const AdminSettings = () => {

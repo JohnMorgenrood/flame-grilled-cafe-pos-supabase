@@ -1,5 +1,5 @@
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 
 class PaymentService {
   constructor() {

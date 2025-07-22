@@ -6,8 +6,8 @@ import {
   Search, Filter, Grid, List, Zap, TrendingUp, Clock, Users, Heart,
   CheckCircle, AlertCircle, Info, Settings, Camera, Palette, Tags
 } from 'lucide-react';
-import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 
 const MenuManagementMasterpiece = () => {
   // === STATE MANAGEMENT ===

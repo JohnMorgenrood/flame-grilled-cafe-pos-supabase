@@ -45,7 +45,7 @@ import {
   getDownloadURL, 
   deleteObject 
 } from 'firebase/storage';
-import { db, storage } from '../firebase/firebase';
+import { db, storage } from '../config/supabase';
 
 const ModernAdminDashboard = () => {
   const navigate = useNavigate();

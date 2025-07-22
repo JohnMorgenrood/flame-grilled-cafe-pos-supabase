@@ -8,7 +8,7 @@ import {
   query, 
   orderBy 
 } from 'firebase/firestore';
-import { db } from '../../../firebase/firebase';
+import { db } from '../../../config/supabase';
 import { Clock, CheckCircle, DollarSign } from 'lucide-react';
 import toast from 'react-hot-toast';
 

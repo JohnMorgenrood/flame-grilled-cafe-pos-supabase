@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase/firebase';
+
+import { db } from '../../config/supabase';
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { auth, googleProvider } from '../firebase/firebase';
+import { auth, googleProvider } from '../config/supabase';
 import toast from 'react-hot-toast';
 
 const FirebaseDebug = () => {

@@ -10,8 +10,8 @@ import {
   FaReceipt
 } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { doc, onSnapshot, updateDoc } from 'firebase/firestore';
-import { db } from '../../firebase/firebase';
+
+import { db } from '../../config/supabase';
 import { toast } from 'react-hot-toast';
 
 const OrderTracking = () => {

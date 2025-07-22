@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Plus, Edit3, Trash2, Save, X, Flame, Star, Search, Zap } from 'lucide-react';
-import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 
 // Optimized Fast Menu Management - Loads in under 3 seconds
 const FastMenuManagement = () => {

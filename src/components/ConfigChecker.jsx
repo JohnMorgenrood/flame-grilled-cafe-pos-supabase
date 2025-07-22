@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaExclamationTriangle, FaTimes } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
-import { auth, googleProvider } from '../firebase/firebase';
-import { signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '../config/supabase';
+
 import { locationService } from '../services/LocationService';
 
 const ConfigChecker = () => {

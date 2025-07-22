@@ -6,8 +6,8 @@ import {
   createUserWithEmailAndPassword, 
   signOut 
 } from 'firebase/auth';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { auth, db } from '../firebase/firebase';
+
+import { auth, db } from '../config/supabase';
 
 const AuthContext = createContext({});
 

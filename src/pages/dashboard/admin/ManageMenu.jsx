@@ -14,7 +14,7 @@ import {
   getDownloadURL, 
   deleteObject 
 } from 'firebase/storage';
-import { db, storage } from '../../../firebase/firebase';
+import { db, storage } from '../../../config/supabase';
 import { Plus, Edit, Trash2, Upload } from 'lucide-react';
 import toast from 'react-hot-toast';
 

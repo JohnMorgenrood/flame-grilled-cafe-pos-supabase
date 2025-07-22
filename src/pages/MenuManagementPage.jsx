@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Plus, Edit3, Trash2, Save, X, Upload, Award, Flame, Star, DollarSign, Image as ImageIcon } from 'lucide-react';
-import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+
+import { db } from '../config/supabase';
 
 const MenuManagementPage = () => {
   const [menuItems, setMenuItems] = useState([]);
