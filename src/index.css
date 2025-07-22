@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic CSS - Now with Tailwind */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Hide scrollbars for mobile sliders */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Text clamping for desktop cards */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .category-slider {
+    padding-bottom: 8px;
+  }
+  
+  .menu-item-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  .menu-grid {
+    max-width: 1400px;
+  }
+  
+  .menu-card-image {
+    height: 200px;
+  }
+  
+  /* Professional card hover effects */
+  .menu-card {
+    transition: all 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Enhanced typography for desktop */
+  .menu-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  .menu-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+  
+  /* Larger food emojis for desktop impact */
+  .food-emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Professional category headers */
+  .category-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Better container spacing */
+  .menu-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Enhanced rating and meta info */
+  .rating-badge {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  /* Professional price styling */
+  .price-tag {
+    background: linear-gradient(45deg, #10b981, #059669);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+  }
+}

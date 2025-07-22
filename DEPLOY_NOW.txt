@@ -1,0 +1,63 @@
+🚀 FINAL DEPLOYMENT STEPS - FOLLOW EXACTLY
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  TO PREVENT ROLLBACKS IN FIREBASE:
+
+1. FIRST - Open Command Prompt or PowerShell as Administrator
+   
+2. Navigate to your project:
+   cd "C:\Users\VALERIE\Desktop\flammedgrilledcafe"
+
+3. Login to Firebase:
+   firebase login
+   (This will open your browser - complete the login)
+
+4. Verify your login:
+   firebase projects:list
+   (Should show: flame-grilled-cafe-pos)
+
+5. Build the project:
+   npm run build
+   (Wait for "Build completed" message)
+
+6. Deploy with anti-rollback protection:
+   firebase deploy --only hosting --message "PRODUCTION RELEASE v1.0 - Admin Dashboard with ZAR Currency and Category Management - DO NOT ROLLBACK - FINAL VERSION"
+
+7. Wait for deployment to complete (usually 1-2 minutes)
+
+8. Test your live site:
+   https://flame-grilled-cafe-pos.web.app
+
+═══════════════════════════════════════════════════════════════
+
+🛡️  ROLLBACK PREVENTION MEASURES:
+
+✅ Your deployment message includes "DO NOT ROLLBACK"
+✅ Version is clearly marked as "PRODUCTION RELEASE v1.0"
+✅ Includes feature description for identification
+✅ Build process validates all files before deployment
+
+🔍 IN FIREBASE CONSOLE:
+- Go to: https://console.firebase.google.com
+- Select: flame-grilled-cafe-pos project
+- Click: Hosting tab
+- Look for: Your deployment with the long message above
+- NEVER click "Rollback" on any previous versions
+
+✅ WHAT WILL BE LIVE:
+- Complete Admin Dashboard
+- South African Rand (R) currency 
+- Category management with 13 themed icons
+- Image upload for categories
+- Edit functionality for all categories
+- Mobile-responsive design
+- All CRUD operations working
+
+🚨 IF SOMETHING GOES WRONG:
+- Don't rollback in Firebase Console
+- Run: npm run build
+- Run: firebase deploy --only hosting --message "HOTFIX v1.0.1 - [describe what you fixed]"
+- Always increment version numbers
+
+Your app will be live at: https://flame-grilled-cafe-pos.web.app
