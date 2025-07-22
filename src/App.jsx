@@ -1,0 +1,1 @@
+﻿function App() { return React.createElement("div", { style: { minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(135deg, #f59e0b, #dc2626)", color: "white", fontFamily: "system-ui" } }, React.createElement("h1", { style: { fontSize: "3rem" } }, "🔥 Flame Grilled Cafe - Clean Build! 🔥")); } export default App;
